@@ -2,11 +2,9 @@ import _ from 'lodash';
 import * as style from './style.css';
 
 function component() {
-    var element = document.createElement('div');
+    var element = document.createElement('h1');
 
-    // Lodash, currently included via a script, is required for this line to work
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.innerHTML = _.join(['Hello', 'there!', '—', 'General', 'Kenobi!'], ' ');
     element.classList.add(style.hello);
 
     return element;
