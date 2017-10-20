@@ -39,6 +39,25 @@ module.exports = {
                         loader: 'postcss-loader'
                     }
                 ]
+            },
+            {
+                test: /\.styl$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'style-loader',
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 1,
+                        }
+                    },
+                    {
+                        loader: 'stylus-loader'
+                    }
+                ]
             }
         ]
     }
